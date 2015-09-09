@@ -119,4 +119,3 @@ swans.reg = lm(weight~circum+wingspan+cwidth+cheight+sex,data=swans)
 # and we can plot weight versus wingspan and put the regression line on the plot:
 summary(swans.reg)
 plot(swans.reg)
-
