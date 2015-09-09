@@ -1,5 +1,9 @@
-# Practice with R
-#
+#######################
+# Section 1, Stat 139 #
+#   More R Practice   #
+#      9/9/15         #
+#    Reagan Rose      #
+#######################
 # read in the data from the file "swans.dat", which has a header row, so
 # the first 5 rows look like:
 #
