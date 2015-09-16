@@ -7,7 +7,6 @@
 #    Reagan Rose      #
 #######################
 
-
 # Question 2: Crabs data #
 setwd("~/Desktop/Harvard/Teaching/Stat 139/R Code and Data")
 crabs <- read.csv("crabs.csv")

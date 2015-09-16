@@ -35,4 +35,3 @@ mean(abs(ybardiff_null.sim) > abs(null.diff))
 hist(ybardiff_alt.sim, xlim=c(-0.6,0.6))
 abline(v=alt.diff, lwd=2, col="red")
 mean(abs(ybardiff_alt.sim) > abs(alt.diff))
-
