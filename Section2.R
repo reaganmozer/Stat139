@@ -3,7 +3,7 @@
 #  Hypothesis Tests   #
 #         +           #
 #  Permutation Tests  #
-#      9/16/15        #
+#      9/17/15        #
 #    Reagan Rose      #
 #######################
 
@@ -32,6 +32,7 @@ cor(crabs$weight, crabs$col)
 
 # First lets look at the difference in means
 attach(crabs)
+
 ybardiff.obs <- mean(crabs[crabs$col==1,]$weight) - mean(crabs[crabs$col==0,]$weight)
 t.test(crabs$weight ~ crabs$col, var.equal=T)
 
