@@ -1,5 +1,5 @@
 #######################
-# Section 3, Stat 139 #
+# Section 4, Stat 139 #
 #    Assumptions      #
 #         +           #
 #   Transformations   #
