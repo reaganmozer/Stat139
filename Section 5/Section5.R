@@ -11,7 +11,7 @@
 mu0 = 3.35
 sigma = 0.15
 n = 25
-alpha = 0.10
+alpha = 0.05
 z_alpha = abs(qnorm(1-(alpha/2)))
 rr_low = mu0 - z_alpha*(sigma/sqrt(n)) #rejection region low
 rr_high = mu0 + z_alpha*(sigma/sqrt(n))
@@ -56,6 +56,7 @@ for (i in 1:nsim){
 }
 
 mean(pvals < 0.05) # Proportion that were flagged as significant
+#should look like alpha
 
 # Part 3 (ii)
 # Simulate for all 20 genes at once
@@ -72,7 +73,7 @@ any_significant = c()
 for (i in 1:nsim){
   any_significant[i] = any(pvals[i,] < 0.05)
 }
-mean(any_significant)
+mean(any_significant) #should look like Part (i)
 
 # Part 3 (iii)
 # Now use the Bonferroni correction
@@ -81,4 +82,4 @@ any_significant_corrected = c()
 for (i in 1:nsim){
   any_significant_corrected[i] = any(pvals[i,] < alpha_star)
 }
-mean(any_significant_corrected)
+mean(any_significant_corrected) # should look like alpha
