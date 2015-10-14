@@ -7,12 +7,18 @@
 
 # Exercise 1
 n = c(31,31,14)
+N = sum(n)
 mean = c(25.8,22.68,21.29)
 sd = c(2.56, 3.67, 2.76)
 
 allmean = mean(mean)
 SSB = sum(n*(mean-allmean)^2)
 SSW = sum((n-1)*sd^2)
+dfB = length(n)-1
+dfW = N - length(n)
+F_obs = (SSB/dfB)/(SSW/dfW)
+
+1 - pf(F_obs, dfB, dfW) #p-value
 
 # Contrasts for midsize versus big
 a = c(1,-.5,-.5)
@@ -43,6 +49,7 @@ df.t = (n[2]+n[3]-2)
 
 
 # Exercise 2
+setwd("~/Desktop/Stat139/Section 6")
 data = read.csv("insurance_claims.csv")
 head(data)
 attach(data)
@@ -71,3 +78,13 @@ summary(model1)
 model2 = aov(log(claim_amount)~claim_type+fraudulent)
 summary(model2)
 
+
+# Something cool we'll talk about next week
+model3 = aov(log(claim_amount)~townsize)
+summary(model3)
+
+model4 = aov(log(claim_amount)~claim_type+townsize)
+summary(model4)
+
+model5 = aov(log(claim_amount)~claim_type*townsize)
+summary(model5)
