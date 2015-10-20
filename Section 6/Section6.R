@@ -1,17 +1,17 @@
 #######################
 # Section 6, Stat 139 #
 #       ANOVA         #
-#      10/14/15       #
+#      10/15/15       #
 #    Reagan Rose      #
 #######################
 
 # Exercise 1
-n = c(31,31,14)
+n = c(24,67,32)
 N = sum(n)
-mean = c(25.8,22.68,21.29)
-sd = c(2.56, 3.67, 2.76)
+mean = c(76.88,71.45,63.19)
+sd = c(14.10, 13.05, 17.3)
 
-allmean = mean(mean)
+allmean = sum(mean*(n/N))
 SSB = sum(n*(mean-allmean)^2)
 SSW = sum((n-1)*sd^2)
 dfB = length(n)-1
