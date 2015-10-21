@@ -86,7 +86,7 @@ pval_12.HSD = pval_13.HSD = pval_23.HSD = c() #Tukey's HSD
 
 for (i in 1:n.sim){
 x1 = rnorm(5, mean=1, sd=1)
-x2 = rnorm(5, mean=2, sd=1)
+x2 = rnorm(5, mean=1, sd=1)
 x3 = rnorm(5, mean=1, sd=1)
 
 x = c(x1,x2,x3)
