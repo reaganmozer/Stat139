@@ -63,6 +63,7 @@ TukeyHSD(model) # the easiest way
 # the harder way
 numgroups = 3
 nobs = 15
+nbar = mean(n)
 alpha = 0.05
 
 q = qtukey(1-alpha,numgroups,nobs - numgroups)/sqrt(2)

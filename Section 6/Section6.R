@@ -59,6 +59,8 @@ summary(claim_amount)
 
 # Figure out the correct way to transform the data
 hist(claim_amount)
+qqnorm(claim_amount)
+qqline(claim_amount)
 hist(log(claim_amount))
 boxplot(log(claim_amount)~fraudulent)
 boxplot(log(claim_amount)~claim_type)
