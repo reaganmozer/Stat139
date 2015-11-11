@@ -21,7 +21,7 @@ abline(model, col="red")
 summary(model)
 
 # In real life, things are never "perfectly related", so let's add some noise
-income_noise = 1000 + 50*age_years +rnorm(100, mean=100, sd=100)
+income_noise = 1000 + 50*age_years +rnorm(100, mean=0, sd=100)
 plot(age_years, income_noise)
 model2 = lm(income_noise~age_years)
 abline(model2, col="red")
@@ -40,7 +40,7 @@ plot(data) # this will show you all possible scatterplots
 
 plot(matches~attractiveness)
 model1 = lm(matches~attractiveness)
-abline(model1)
+abline(model1, col="red", lwd=3)
 summary(model1)
 
 plot(matches~photos)
