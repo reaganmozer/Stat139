@@ -9,7 +9,7 @@ attach(data)
 plot(x,y1)
 hist(x)
 hist(y1)
-plot(log(x), y1)
+plot(log(x), y1
 fit1 = lm(y1~x,data)
 fit1a = lm(y1~log(x), data)
 
@@ -121,6 +121,7 @@ plot(model$residuals~model$fitted.values)
 abline(h=0, col="red", lwd=2)
 
 qqnorm(model$residuals)
+qqline(model$residuals)
 
 # Predict height for a female with 5'0 mom and 6'0 dad
 newdata = data.frame(mom_height=60, dad_height=72, female=1)
