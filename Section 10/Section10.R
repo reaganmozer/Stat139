@@ -32,7 +32,7 @@ Y = as.matrix(Y)
 
 beta_hat = solve(t(X)%*%X)%*%t(X)%*%Y
 
-model2 = lm(data$child_height~., data)
+model2 = lm(data$child_height~.*., data)
 sigma_2_hat = 1.007
 vcov(model2)
 sigma_2_hat * solve(t(X)%*%X)
